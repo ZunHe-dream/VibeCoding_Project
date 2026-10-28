@@ -1,0 +1,10 @@
+### 上传图片测试
+POST http://localhost:8080/common/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="test.jpg"
+Content-Type: image/jpeg
+
+< D:\museum\uploadstest.jpg
+--WebAppBoundary--

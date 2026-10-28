@@ -1,0 +1,17 @@
+### 场景1：正确的登录
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "username": "admin1",
+  "password": "123456"
+}
+
+### 场景2：错误的密码
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "wrong_password"
+}

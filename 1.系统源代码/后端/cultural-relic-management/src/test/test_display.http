@@ -1,0 +1,4 @@
+### 6. 获取巡展及其关联文物的完整详情
+# 注意：这里的 1 是指申请单的 app_id
+GET http://localhost:8080/exhibition/detail/1
+Accept: application/json

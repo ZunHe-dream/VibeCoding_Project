@@ -1,0 +1,35 @@
+server:
+  port: 8080 # 后端 API 运行的端口
+
+spring:
+  # ─── 新增：文件上传大小限制配置 ───
+  servlet:
+    multipart:
+      max-file-size: 10MB      # 单个文件最大 10MB
+      max-request-size: 10MB   # 单次请求总额最大 10MB
+  # ──────────────────────────────
+
+  datasource:
+    # 数据库驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接 URL
+    url: jdbc:mysql://localhost:3306/cultural_relic_system?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456 # 填入你重置后的数据库密码
+    # 使用 Druid 连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# MyBatis-Plus 相关配置
+mybatis-plus:
+  # 映射设置
+  configuration:
+    # 自动将数据库下划线字段转为驼峰命名 (例如：user_id -> userId)
+    map-underscore-to-camel-case: true
+    # 在控制台打印 SQL 语句，开发阶段调试神器
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 实体类包路径
+  type-aliases-package: org.example.entity
+  global-config:
+    db-config:
+      # 全局主键策略：跟随数据库自增
+      id-type: auto

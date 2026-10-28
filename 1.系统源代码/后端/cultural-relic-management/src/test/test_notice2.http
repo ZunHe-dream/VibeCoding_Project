@@ -1,0 +1,9 @@
+POST http://localhost:8080/notice/save
+Content-Type: application/json
+
+{
+  "title": "新到文物：唐代金银器一批",
+  "content": "我馆新征集了一批珍贵的唐代金银器，即将开启特展。",
+  "authorId": 1,
+  "isTop": 0
+}

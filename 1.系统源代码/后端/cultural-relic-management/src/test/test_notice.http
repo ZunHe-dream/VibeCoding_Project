@@ -1,0 +1,9 @@
+POST http://localhost:8080/notice/save
+Content-Type: application/json
+
+{
+  "title": "【重要】馆内电路检修，明日闭馆",
+  "content": "各位游客，由于文物库房电路升级，我馆将于2026-02-24全天闭馆。",
+  "authorId": 1,
+  "isTop": 1
+}

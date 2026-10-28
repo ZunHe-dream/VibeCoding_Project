@@ -1,0 +1,9 @@
+### 2. 管理员执行审批 (通过)
+POST http://localhost:8080/exhibition/audit
+Content-Type: application/json
+
+{
+  "appId": 3,
+  "status": 1,
+  "auditRemark": "内容详实，准予通过"
+}
